@@ -10,6 +10,6 @@
   "compatibility_date": "2025-03-21",
   "compatibility_flags": [ "nodejs_compat" ],
   "observability": { "enabled": true },
-  "durable_objects": {"bindings": [{ "name": "DO", "class_name": "DemoDO", "script_name": "opennext-ws-error-next"}]}
+  "durable_objects": {"bindings": [{ "name": "DO", "class_name": "DemoDO", "script_name": "opennext-ws-error-do"}]}
 }
 
