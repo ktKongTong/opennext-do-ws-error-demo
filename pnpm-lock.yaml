@@ -4,36 +4,27 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-catalogs:
-  default:
-    '@cloudflare/workers-types':
-      specifier: ^4.20250327.0
-      version: 4.20250412.0
-    wrangler:
-      specifier: ^4.10.0
-      version: 4.10.0
-
 importers:
 
   .: {}
 
-  apps/do-worker:
+  apps/do:
     dependencies:
       hono:
         specifier: 4.7.6
         version: 4.7.6
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 'catalog:'
+        specifier: ^4.20250327.0
         version: 4.20250412.0
       typescript:
         specifier: ^5.8
         version: 5.8.3
       wrangler:
-        specifier: 'catalog:'
+        specifier: ^4.10.0
         version: 4.10.0(@cloudflare/workers-types@4.20250412.0)
 
-  apps/next-demo:
+  apps/next:
     dependencies:
       hono:
         specifier: 4.7.6
@@ -49,7 +40,7 @@ importers:
         version: 19.1.0(react@19.1.0)
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 'catalog:'
+        specifier: ^4.20250327.0
         version: 4.20250412.0
       '@opennextjs/cloudflare':
         specifier: ~1.0.0-beta.2 || ^1.0.0
@@ -76,20 +67,20 @@ importers:
         specifier: ^4.10.0
         version: 4.10.0(@cloudflare/workers-types@4.20250412.0)
 
-  apps/rpc-worker:
+  apps/plain:
     dependencies:
       hono:
         specifier: 4.7.6
         version: 4.7.6
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 'catalog:'
+        specifier: ^4.20250327.0
         version: 4.20250412.0
       typescript:
         specifier: ^5.8
         version: 5.8.3
       wrangler:
-        specifier: 'catalog:'
+        specifier: ^4.10.0
         version: 4.10.0(@cloudflare/workers-types@4.20250412.0)
 
 packages:
