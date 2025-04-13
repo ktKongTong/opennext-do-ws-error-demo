@@ -17,5 +17,12 @@
 	"observability": {
 		"enabled": true
 	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "better-auth-anonymous-issue",
+			"database_id": "12b9f3b6-2261-46e5-a346-f3a13c0d38ad"
+		}
+	],
 	"durable_objects": {"bindings": [{ "name": "DO", "class_name": "DemoDO", "script_name": "opennext-ws-error-do" }]}
 }

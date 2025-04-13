@@ -3,6 +3,9 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
+		"migrate": "drizzle-kit migrate",
+		"generate": "drizzle-kit generate",
+		"d1:mi": "wrangler d1 execute better-auth-anonymous-issue --file=./drizzle/0000_wet_the_hunter.sql",
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
@@ -16,10 +19,12 @@
 		"next": "15.2.5",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
+		"drizzle-orm": "0.41.0",
+		"better-auth": "1.2.6",
         "hono": "4.7.6"
 	},
 	"devDependencies": {
-
+		"drizzle-kit": "0.30.6",
 		"@cloudflare/workers-types": "^4.20250327.0",
 		"@opennextjs/cloudflare": "~1.0.0-beta.2 || ^1.0.0",
 		"@tailwindcss/postcss": "^4",

@@ -1,8 +1,19 @@
-
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
+import {getAuth} from "@/lib/auth.server";
 const app = new Hono().basePath('/api');
+
+
+
+app.on(["POST", "GET"], "/auth/*", (c) => {
+  return getAuth().handler(c.req.raw);
+});
+
+app.get("/me", async (c) => {
+  const session = await getAuth().api.getSession({headers: c.req.raw.headers})
+  return c.json(session)
+});
 
 app.get("/ws", async (c) => {
   if (c.req.header("upgrade") !== "websocket") {
