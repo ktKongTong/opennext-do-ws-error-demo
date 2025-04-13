@@ -1,0 +1,15 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+
+ {
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": "src/index.ts",
+  "name": "opennext-ws-error-plain",
+  "compatibility_date": "2025-03-21",
+  "compatibility_flags": [ "nodejs_compat" ],
+  "observability": { "enabled": true },
+  "durable_objects": {"bindings": [{ "name": "DO", "class_name": "DemoDO", "script_name": "opennext-ws-error-next"}]}
+}
+
